@@ -1,0 +1,112 @@
+abstract BoardSpace
+-var owner = Player
+abstract onLanding
+
+Edge extends BoardSpace
+-var occupied = boolean
+-var owner = Player
+-onlanding(roads)
+
+Corner extends BoardSpace
+-var occupied = boolean
+-var owner = Player
+-onlanding(settlement, city)
+
+Hex extends BoardSpace
+-var owner = Player
+-6 corners (boolean[], if true, adjacent corners must be false, else warning "cannot place there")
+-6 edges
+
+-Land extends Hex
+--constructor(type, number)
+---var produces = boolean (true)
+---var owners[] = none
+--var produces = boolean
+--var owners[] = Players[]
+--var type = string (what produce)
+--var number = int (when produce)
+--onlanding(robber) produces = false
+--edge extends BoardSpace
+---onlanding (road)
+--corner extends BoardSpace
+---onlanding (settlement, city)
+
+-Sea extends Hex
+--var port = boolean
+--var type = int (the port type)
+
+gameBoard = [] of hexes
+theLand = [] of landhexes()
+theSea = [] of seahexes()
+
+for (i = 0; i < gb.length; i++) {
+	if (i < 18) {
+		gameboard[i] = theSea[i];
+	}
+	else {
+		gameboard[i] = theLands[i - 18];
+	}
+}
+
+Player
+-var resources = resourceCard[]
+--
+-var devcards = devCard[]
+--
+
+Pieces
+-roads
+-settlements
+--must be two spots away from another settlement
+-cities
+--can only be placed on current settlement
+-robber
+--on seven, stops production on space (onlanding)
+
+extra stuff
+-dice
+--set, rolls each turn
+-resource cards
+--type
+-devcards
+--soldier
+--monopoly
+--yOfPlenty
+--road building
+--victory
+
+players[]
+boolean playGame = true
+while (playGame) {
+	for (player[i]) {
+		start turn
+		-play soldier if able
+		roll dice
+		-collect resources
+		-(trade)
+		-buy things (placing pieces)
+		-play dev cards
+		if (player[i].vp >= 10) {
+			playgame = false;
+			break;
+		}
+	}
+}
+
+hexBoard
+18 - r1
+12 - r2
+6 - r3
+1 - r4
+37 - total
+
+Exceptions:
+-NoPlayerColor
+-NothingToSeeHere
+-NoConnectedRoad
+-NoMorePiece
+-NotEnoughResources
+-NotYourPiece
+-HaventRolledDice
+-BankIsEmpty
+-MustMoveRobber
