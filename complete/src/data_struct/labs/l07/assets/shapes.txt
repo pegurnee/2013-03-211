@@ -1,0 +1,7 @@
+Circle	2.5
+Circle 12.7
+Square 6.0
+Triangle 12.5 6.2
+Rectangle 12.1 5.6
+Triangle 1.5 3.2
+Square 7.3

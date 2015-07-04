@@ -1,0 +1,9 @@
+
+Weekly Payroll
+
+Name: George
+$10.5 per hour for 25.0 hours: $65.625 a week
+Name: Marvin
+$15.5 per hour for 50.0 hours: $193.75 a week
+Name: Harold
+$12.25 per hour for 37.0 hours: $113.3125 a week

@@ -1,0 +1,5 @@
+
+Squares
+
+Side: 6.00 Area: 36.00
+Side: 7.30 Area: 53.29

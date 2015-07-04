@@ -1,0 +1,5 @@
+
+Triangles
+
+Base: 12.50 Height: 6.20 Area: 38.75
+Base: 1.50 Height: 3.20 Area: 2.40
